@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Tugas3;
+package Tugastiga;
 
 /**
  * Nama     : M.Syifa'ul Ikrom A
@@ -14,6 +14,8 @@ public class simpankata {
     public static void main(String[] args) {
        char[] kata = {'M','I','S','S','I','S','S','I','P','I'};
        int a=0,b=0,c=0,d=0;
+       
+        System.out.println("Menghitung jumlah huruf M,I,S,P pada kata MISSISSIPI");
         for (int i = 0; i < kata.length; i++) {
            switch (kata[i]) {
                case 'M':

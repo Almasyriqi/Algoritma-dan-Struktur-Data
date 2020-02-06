@@ -17,6 +17,7 @@ public class bank {
         int x=0, saldoAwal, saldoAkhir;
         double bunga;
         
+        System.out.println("Menghitung lama menabung dengan bunga 2% per bulan");
         System.out.print("Saldo Awal = Rp ");
         saldoAwal = sc.nextInt();
         System.out.print("Saldo Akhir = Rp ");

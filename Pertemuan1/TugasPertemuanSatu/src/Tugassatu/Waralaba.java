@@ -16,7 +16,7 @@ public class Waralaba {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int paket, menu1, menu2, CA = 12000, CB = 15000, CC = 20000, x = 0, totalp = 0;
+        int paket, menu1, menu2, CA = 12000, CB = 15000, CC = 20000, totalp = 0;
         int OA = 10000, OB = 12000, OC = 15000, jumlah, total = 0;
         String ulang;
 
@@ -33,7 +33,6 @@ public class Waralaba {
 
             switch (paket) {
                 case 1:
-                    x++;
                     System.out.println("Menu Paket Chicken");
                     System.out.println("1. Chicken A (Rp. 12.000)");
                     System.out.println("2. Chicken B (Rp. 15.000)");
@@ -42,22 +41,25 @@ public class Waralaba {
                     menu1 = sc.nextInt();
                     switch (menu1) {
                         case 1:
-                            System.out.println("Pembelian Chicken A");
+                            System.out.println("Pembelian Chicken A (Rp 12.000)");
                             System.out.print("Jumlah pembelian : ");
                             jumlah = sc.nextInt();
                             total = CA * jumlah;
+                            System.out.println("Total harga = Rp " + total);
                             break;
                         case 2:
-                            System.out.println("Pembelian Chicken B");
+                            System.out.println("Pembelian Chicken B (Rp. 15.000)");
                             System.out.print("Jumlah pembelian : ");
                             jumlah = sc.nextInt();
                             total = CB * jumlah;
+                            System.out.println("Total harga = Rp " + total);
                             break;
                         case 3:
-                            System.out.println("Pembelian Chicken C");
+                            System.out.println("Pembelian Chicken C (Rp. 20.000)");
                             System.out.print("Jumlah pembelian : ");
                             jumlah = sc.nextInt();
-                            total = CB * jumlah;
+                            total = CC * jumlah;
+                            System.out.println("Total harga = Rp " + total);
                             break;
                         default:
                             System.out.println("Menu tidak tersedia");
@@ -65,7 +67,6 @@ public class Waralaba {
                     }
                     break;
                 case 2:
-                    x++;
                     System.out.println("Menu Paket Oke");
                     System.out.println("1. Oke A (Rp. 10.000)");
                     System.out.println("2. Oke B (Rp. 12.000");
@@ -74,22 +75,25 @@ public class Waralaba {
                     menu2 = sc.nextInt();
                     switch (menu2) {
                         case 1:
-                            System.out.println("Pembelian Oke A");
+                            System.out.println("Pembelian Oke A (Rp. 10.000)");
                             System.out.print("Jumlah pembelian : ");
                             jumlah = sc.nextInt();
                             total = OA * jumlah;
+                            System.out.println("Total harga = Rp " + total);
                             break;
                         case 2:
-                            System.out.println("Pembelian Oke B");
+                            System.out.println("Pembelian Oke B (Rp. 12.000)");
                             System.out.print("Jumlah pembelian : ");
                             jumlah = sc.nextInt();
                             total = OB * jumlah;
+                            System.out.println("Total harga = Rp " + total);
                             break;
                         case 3:
-                            System.out.println("Pembelian Oke C");
+                            System.out.println("Pembelian Oke C (Rp. 15.000)");
                             System.out.print("Jumlah pembelian : ");
                             jumlah = sc.nextInt();
                             total = OC * jumlah;
+                            System.out.println("Total harga = Rp " + total);
                             break;
                         default:
                             System.out.println("Menu tidak tersedia");
@@ -103,10 +107,10 @@ public class Waralaba {
             }
             totalp += total;
             sc.nextLine();
-            System.out.print("Pilih menu lain? ");
+            System.out.print("Pilih menu lain?(ya/tidak) ");
             ulang = sc.nextLine();
         }
 
-        System.out.println("Total pembayaran : " + totalp);
+        System.out.println("Total pembayaran : Rp " + totalp);
     }
 }
