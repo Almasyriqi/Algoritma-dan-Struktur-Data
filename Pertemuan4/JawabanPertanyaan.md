@@ -20,5 +20,6 @@ Kode tersebut menggunakan operator ternary dan tanda ":" memiliki kegunaan untuk
 1. Pada praktikum 4 perulangan kedua dirubah menjadi
 <img src= 'ModifPrak4.png'>
 Maka notasinya adalah O(n.n.1) = O(n^2) 
+
 2. Berdasarkan notasi nomor 1, jika n=100 maka O(n^2) = 100^2 = 10000 instruksi
 3. Terdapat perbedaan notasi di antara kedua kode tersebut. Pada kode A notasinya adalah O(n.n.1) = O(n^2) sedangkan pada kode B notasinya adalah O(n.∞.1) = O(n.∞). Hal ini terjadi karena pada kode B di inner loop nya terdapat perbedaan dengan kode A yaitu pada perubahan nilainya di kode A perubahan nilainya menggunakan j++ sedangkan di kode B menggunakan i++ sehingga nilai j selalu 0 dan akan terjadi infinity loop. 

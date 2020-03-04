@@ -13,6 +13,7 @@ Main Class BFDC Brute force
 
 ## Latihan Divide Conquer
 Class maxMin
+
 <img src= 'MaxminDC.png'>
 
 Class minMax Divide Conquer
@@ -23,6 +24,7 @@ Main Class BFDC Divide Conquer
 
 ## Screenshot Jawaban Pertanyaan
 Menampilkan Hasil Input Array Praktikum 1
+
 <img src= 'Pertanyaan1.png'>
 
 Modifikasi perhitungan nilai minimal dan maksimal terpisah dari class main algoritma brute force
