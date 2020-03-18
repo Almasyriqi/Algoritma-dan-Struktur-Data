@@ -36,6 +36,12 @@ public class MainSuara {
             System.out.print("Pilihan suara ke-" + (i+1) + ": ");
             s1.suaraDipilih[i] = sc.nextInt();
         }
-        System.out.println("Coba = " + s1.suaraTerbanyak(s1.suaraDipilih, 0, s1.total-1));
+        int hasil = s1.suaraTerbanyak(s1.suaraDipilih, 0, s1.total-1);
+        if (hasil == 0) {
+            System.out.println("Masing-masing kandidat memiliki mayoritas yang hampir sama");
+        } else {
+            System.out.println("Ketua BEM yang terpilih adalah " + ps[hasil-1].namaKandidat);
+        }
+        System.out.println("Suara terbanyak = " + s1.suaraTerbanyak(s1.suaraDipilih, 0, s1.total-1));
     }
 }

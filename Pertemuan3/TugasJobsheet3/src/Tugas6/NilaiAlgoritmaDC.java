@@ -18,26 +18,19 @@ public class NilaiAlgoritmaDC {
     public int nilaiUTS;
     public int nilaiUAS;
     
-    public double hitungTotalNilai(int n, int tugas, int kuis, int uts, int uas) {
-        double total = 0;
-        if (n == 0){
-            return 1;
-        }
-        else {
-             return hitungTotalNilai( n-1, tugas, kuis, uts, uas) + hitungTotalNilai( n-1, tugas, kuis, uts, uas);
-           
-        }
+    public double hitungTotalNilai(int tugas, int kuis, int uts, int uas) {
+        return (tugas * 0.3) + (kuis * 0.2) + (uts * 0.2) + (uas * 0.3);
     }
     
     double rataDC(double arr[], int a, int b){
         if(a==b){
-            return arr[1];
+            return arr[a];
         }
         else if(a<b){
-            int nilai= (a+b)/2;
-            double anilai=rataDC(arr, a, nilai-1);
-            double bnilai = rataDC(arr, nilai+1, b);
-            return bnilai+anilai + arr[nilai];
+            int tengah= (a+b)/2;
+            double anilai=rataDC(arr, a, tengah-1);
+            double bnilai = rataDC(arr, tengah+1, b);
+            return bnilai+anilai + arr[tengah];
         }
         return 0;
     }

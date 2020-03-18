@@ -19,13 +19,8 @@ jika inputan elemen di atas 20 angka, maka ada perbedaan waktu eksekusi dengan p
 1. Perbedaan Method PangkatBF() dan PangkatDC()
 PangkatBF(): Menggunakan algoritma brute force, Menggunakan fungsi iterasi, dan menghitung hasil pangkat menggunakan perulangan for.
 PangkatDC(): Menggunakan algoritma divide and conquer, menggunakan fungsi rekursif, dan menghitung hasil pangkat dengan memanggil fungsi itu sendiri sampai memenuhi base line.
-2. Arti potongan kode
-if (n%2==1) { //bilangan ganjil
-                return (pangkatDC(a,n/2)*pangkatDC(a,n/2)*a);
-            }
-            else { //bilangan genap
-                return (pangkatDC(a,n/2)*pangkatDC(a,n/2));
-            }
+2. Arti potongan kode:
+<img src= 'rekursifPangkat.png'>
 Jika nilai pemangkat dimodulus 2 = 1, maka termasuk bilangan ganjil dan akan memberikan nilai kembalian yang merupakan recursion call pangkatDC(a,n/2)*pangkatDC(a,n/2)*a, dikali dengan a agar jumlah perkalian dapat ganjil. Sedangkan, jika nilai pemangkat dimodulus 2 != 1, maka termasuk bilangan genap dan akan memberikan nilai kembalian yang merupakan recursion call pangkatDC(a,n/2)*pangkatDC(a,n/2) di kode ini tidak ada perkalian dengan a agar jumlah perkalian dapat genap.
 3. Tahap Combine 
 sudah termasuk dalam kode tersebut. Yaitu pada kode return (pangkatDC(a,n/2)*pangkatDC(a,n/2)*a); dan return (pangkatDC(a,n/2)*pangkatDC(a,n/2));
@@ -55,4 +50,4 @@ return lsum+rsum+arr[mid]; Formula ini digunakan untuk tahapan combine di algori
 4. Variabel mid pada method TotalDC()
 dibutuhkan saat tahap divide pada algoritma divide and conquer agar dapat mendapat nilai tengah dari jumlah data yang ganjil dan memudahkan proses divide jika jumlah datanya ganjil.
 5. Modifikasi program agar bisa lebih dari satu perusahaan
-jawaban di proyek netbeans package minggu3 nama file
+jawaban di proyek netbeans package minggu3 nama file ModifMainSum.java, TambahanSum.java, dan ModifSum.java

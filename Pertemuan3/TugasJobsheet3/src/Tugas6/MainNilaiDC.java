@@ -40,15 +40,16 @@ public class MainNilaiDC {
             System.out.println("=====================================================");
         }
 
-        Rata2DC rt = new Rata2DC();
+        NilaiAlgoritmaDC rt = new NilaiAlgoritmaDC();
+        double[] arr = new double[jumlah];
         System.out.println("Nilai Total Mata Kuliah Algoritama");
         for (int i = 0; i < jumlah; i++) {
             System.out.println("Nama Mahasiswa ke-" + (i + 1) + ": " + na[i].namaMhs);
-            System.out.println("Nilai Total : " + na[i].hitungTotalNilai(jumlah, na[i].nilaiTugas, na[i].nilaiKuis, na[i].nilaiUTS, na[i].nilaiUAS));
-            rt.total += na[i].hitungTotalNilai(jumlah, na[i].nilaiTugas, na[i].nilaiKuis, na[i].nilaiUTS, na[i].nilaiUAS);
+            System.out.println("Nilai Total : " + na[i].hitungTotalNilai(na[i].nilaiTugas, na[i].nilaiKuis, na[i].nilaiUTS, na[i].nilaiUAS));
+            arr[i] += na[i].hitungTotalNilai(na[i].nilaiTugas, na[i].nilaiKuis, na[i].nilaiUTS, na[i].nilaiUAS);
         }
         System.out.println("=====================================================");
-        System.out.println("Rata-rata nilai total seluruh mahasiswa : " + rt.hitungRata(jumlah));
+        System.out.println("Rata-rata nilai total seluruh mahasiswa : " + rt.rataDC(arr, 0, jumlah-1) / jumlah);
     }
 
 }
