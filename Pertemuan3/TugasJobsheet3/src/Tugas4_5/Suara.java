@@ -6,41 +6,51 @@
 package Tugas4_5;
 
 /**
- *
- * @author ASUS
+ * Nama     : M.Syifa'ul Ikrom A
+ * Kelas    : TI 1F
+ * NIM      : 1941720057
  */
 public class Suara {
 
     public int jumlahSuara;
     public int total;
     public int suaraDipilih[];
-    public int suara1=1;
-    public int suara2=2;
-    public int suara3=3;
-    public int suara4=4;
+    public int major = 0;
+    public int maxCount = 0;
+    
+    
+    public void suaraTerbanyak(int arr[]) {
+        suaraBagi(arr, 0, arr.length-1);
+    }
 
-    public int suaraTerbanyak(int arr[], int l, int r)
-    {
-        if (l == r) {
-            return arr[l];
+    private void suaraBagi(int data[], int left, int right) {
+        if (left < right) {
+            int middle = (left + right) / 2;
+            suaraBagi(data, left, middle);
+            suaraBagi(data, middle + 1, right);
+            findMajority(data, left, right+1);
         }
-        else if (l<r){
-            int mid = (l+r) / 2;
-            int left = suaraTerbanyak(arr,l,mid-1);
-            int right = suaraTerbanyak(arr,mid+1,r);
-            if (left == suara1 || arr[mid] == suara1 || right == suara1) {
-                return suara1;
+    }
+    
+    private void findMajority(int arr[], int left, int right) {
+        
+        int index = -1; 
+        for (int i = left; i < right; i++) {
+            int count = 0;
+            for (int j = left; j < right; j++) {
+                if (arr[i] == arr[j]) {
+                    count++;
+                }
             }
-            else if (left == suara2 || arr[mid] == suara2 || right == suara2) {
-                return suara2;
-            }
-            else if (left == suara3 || arr[mid] == suara3 || right == suara3) {
-                return suara3;
-            }
-            else if (left == suara4 || arr[mid] == suara4 || right == suara4) {
-                return suara4;
+ 
+            if (count > maxCount) {
+                maxCount = count;
+                index = i;
             }
         }
-        return 0;
+
+        if (maxCount > right / 2) {
+            major = (arr[index]);
+        } 
     }
 }
