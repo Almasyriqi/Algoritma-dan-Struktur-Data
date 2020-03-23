@@ -31,13 +31,13 @@ public class Main {
         System.out.println("Nilai Elemen Array Terbesar : " + pencarian.maks(data));
         int cari = pencarian.maks(data);
         System.out.println("Jumlah nilai terbesar : " + pencarian.jumlahTerbesar(cari, data));
-        int posisi[] = new int[pencarian.terbesar];
+        int posisi = pencarian.FindBinarySearch(cari, data, 0, data.length - 1);
         for (int i = 0; i < pencarian.terbesar; i++) {
-            posisi[i] = pencarian.FindBinarySearch(cari, data, 0, data.length - 1);
             if (i > 0) {
-                pencarian.Tampilposisi(cari, posisi[i] + 1);
+                pencarian.Tampilposisi(cari, posisi + 1);
+                posisi++;
             } else {
-                pencarian.Tampilposisi(cari, posisi[i]);
+                pencarian.Tampilposisi(cari, posisi);
             }
         }
     }

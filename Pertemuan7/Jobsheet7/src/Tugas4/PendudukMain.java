@@ -8,8 +8,9 @@ package Tugas4;
 import java.util.Scanner;
 
 /**
- *
- * @author ASUS
+ * Nama     : M.Syifa'ul Ikrom A
+ * Kelas    : TI 1F
+ * NIM      : 1941720057
  */
 public class PendudukMain {
 
