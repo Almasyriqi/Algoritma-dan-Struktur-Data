@@ -15,3 +15,18 @@ Hasil run program :
 
 5. Pada konstruktor Stack variabel top diinisialisasi dengan nilai -1 karena array dimulai dari 0, yang berarti bahwa data stack dalam keadaan kosong
 
+
+# Jawaban Pertanyaan 8.4.3 Praktikum 2
+
+1. Fungsi dari method precedence adalah memberikan nilai derajat yang bertipe integer untuk setiap operator sesuai dengan urutan derajatnya agar memudahkan saat mengkonversi dari notasi infix ke notasi postfix
+
+2. Menampilkan hasil konversi infix ke postfix :
+<img src = 'hasilKonversi.png'>
+
+3. Tanda kurung tidak ditampilkan pada hasil konversi karena tanda kurung tidak menentukan hasil operasi postfix, tetapi hanya membantu memberikan ketentuan saat melakukan konversi. Pada 
+
+4. Hasil memasukkan operator @ dan # :
+<img src = 'operator.png'>
+Hasilnya operator @ dan # tidak dieksekusi dan tidak ditampilkan pada hasil konversi karena operator @ dan # tidak ada dalam method IsOperator maupun method IsOperand, maka dari itu dapat diketahui bahwa tanda @ dan # bukanlah operator maupun operand
+
+
