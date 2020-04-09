@@ -79,7 +79,7 @@ public class Queue {
         if (!IsEmpty()) {
             int posisi = FindSeqSearch(data);
             if (posisi != -1) {
-                System.out.println("Nasabah dengan nama : " + data + " berada pada antrian ke-" + posisi + 1);
+                System.out.println("Nasabah dengan nama : " + data + " berada pada antrian ke-" + (posisi + 1));
             } else {
                 System.out.println("Nasabah dengan nama : " + data + " tidak ada dalam antrian");
             }
@@ -90,7 +90,7 @@ public class Queue {
 
     public void printNasabah(int position) {
         if (!IsEmpty()) {
-            if ((position - 1) >= front && (position - 1) <= rear) {
+            if ((position - 1) >= front || (position - 1) <= rear) {
                 System.out.println("Pada antrian ke-" + position + " terdapat data nasabah : ");
                 System.out.println("===========================================================");
                 System.out.println("Nama Nasabah \t: " + q[position-1].nama);
@@ -161,8 +161,6 @@ public class Queue {
         if (indeks<q.length) {
             q[indeks] = N;
             indeks++;
-        } else {
-            System.out.println("Data sudah penuh!!");
-        }
+        } 
     }
 }
