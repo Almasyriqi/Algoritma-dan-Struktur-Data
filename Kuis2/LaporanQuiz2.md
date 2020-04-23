@@ -11,11 +11,14 @@ Class LinkedListPariwisata
 Class PariwisataMain
 <img src = 'PariwisataMain.png'>
 Output Program
+
 <img src = 'output.png'>
 
 ## Flowchart :
 Class Pariwisata
+
 <img src = 'fungsiPariwisata.png'>
+
 Pada class pariwisata terdapat atribut data18, data19, data20, bulan, dan next. Terdapat juga konstruktor yang berfungsi untuk mengisi nilai pada atribut.
 
 Class LinkedListPariwisata
