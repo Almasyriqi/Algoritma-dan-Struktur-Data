@@ -1,4 +1,6 @@
-package doublelinkedlists;
+package Tugas2;
+
+
 
 /**
  * Nama     : M.Syifa'ul Ikrom A
@@ -7,7 +9,8 @@ package doublelinkedlists;
  */
 public class Node {
     int data;
-    Node prev, next;
+    Node prev;
+    Node next;
     
     Node(Node prev, int data, Node next) {
         this.prev = prev;

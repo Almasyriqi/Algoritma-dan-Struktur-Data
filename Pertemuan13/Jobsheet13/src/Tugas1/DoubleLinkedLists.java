@@ -1,4 +1,4 @@
-package doublelinkedlists;
+package Tugas1;
 
 /**
  * Nama     : M.Syifa'ul Ikrom A
@@ -6,18 +6,19 @@ package doublelinkedlists;
  * NIM      : 1941720057
  */
 public class DoubleLinkedLists {
+
     Node head;
     int size;
-    
+
     public DoubleLinkedLists() {
         head = null;
         size = 0;
     }
-    
+
     public boolean isEmpty() {
         return head == null;
     }
-    
+
     public void addFirst(int item) {
         if (isEmpty()) {
             head = new Node(null, item, null);
@@ -28,9 +29,9 @@ public class DoubleLinkedLists {
         }
         size++;
     }
-    
+
     public void addLast(int item) {
-        if(isEmpty()) {
+        if (isEmpty()) {
             addFirst(item);
         } else {
             Node current = head;
@@ -42,7 +43,7 @@ public class DoubleLinkedLists {
             size++;
         }
     }
-    
+
     public void add(int item, int index) throws Exception {
         if (isEmpty()) {
             addFirst(item);
@@ -69,29 +70,29 @@ public class DoubleLinkedLists {
         }
         size++;
     }
-    
+
     public int size() {
         return size;
     }
-    
+
     public void clear() {
         head = null;
         size = 0;
     }
-    
+
     public void print() {
-        if(!isEmpty()) {
+        if (!isEmpty()) {
             Node tmp = head;
             while (tmp != null) {
-                System.out.print(tmp.data + "\t");
+                System.out.println(tmp.data);
                 tmp = tmp.next;
             }
-            System.out.println("\nberhasil diisi");
+            System.out.println();
         } else {
             System.out.println("Linked Lists Kosong");
         }
     }
-    
+
     public void removeFirst() throws Exception {
         if (isEmpty()) {
             throw new Exception("Linked List masih kosong, tidak dapat dihapus!");
@@ -101,9 +102,10 @@ public class DoubleLinkedLists {
             head = head.next;
             head.prev = null;
             size--;
+            System.out.println("Data berhasil dihapus");
         }
     }
-    
+
     public void removeLast() throws Exception {
         if (isEmpty()) {
             throw new Exception("Linked List masih kosong, tidak dapat dihapus!");
@@ -118,8 +120,9 @@ public class DoubleLinkedLists {
         }
         current.next = null;
         size--;
+        System.out.println("Data berhasil dihapus");
     }
-    
+
     public void remove(int index) throws Exception {
         if (isEmpty() || index >= size) {
             throw new Exception("Nilai indeks di luar batas");
@@ -143,16 +146,17 @@ public class DoubleLinkedLists {
                 current.next.prev = current.prev;
             }
             size--;
+            System.out.println("Data berhasil dihapus");
         }
     }
-    
+
     public int getFirst() throws Exception {
         if (isEmpty()) {
             throw new Exception("Linked List Kosong");
         }
         return head.data;
     }
-    
+
     public int getLast() throws Exception {
         if (isEmpty()) {
             throw new Exception("Linked List kosong");
@@ -163,7 +167,7 @@ public class DoubleLinkedLists {
         }
         return tmp.data;
     }
-    
+
     public int get(int index) throws Exception {
         if (isEmpty() || index >= size) {
             throw new Exception("Nilai indeks di luar batas");
@@ -173,5 +177,20 @@ public class DoubleLinkedLists {
             tmp = tmp.next;
         }
         return tmp.data;
+    }
+
+    public void cari(int key) {
+        Node tmp = head;
+        int index = 0;
+        while (tmp.next != null && tmp.data != key) {
+            tmp = tmp.next;
+            index++;
+        }
+        if (tmp.data == key) {
+            System.out.println("Data " + key + " ditemukan pada indeks ke: " + index);
+            System.out.println("========================================");
+        } else {
+            System.out.println("Data tidak ditemukan");
+        }
     }
 }

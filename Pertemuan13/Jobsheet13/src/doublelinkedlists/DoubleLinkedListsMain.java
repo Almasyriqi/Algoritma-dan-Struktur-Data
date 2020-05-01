@@ -1,8 +1,9 @@
 package doublelinkedlists;
 
 /**
- *
- * @author ASUS
+ * Nama     : M.Syifa'ul Ikrom A
+ * Kelas    : TI 1F
+ * NIM      : 1941720057
  */
 public class DoubleLinkedListsMain {
 
