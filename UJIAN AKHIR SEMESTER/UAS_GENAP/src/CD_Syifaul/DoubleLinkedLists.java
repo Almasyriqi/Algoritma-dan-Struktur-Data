@@ -134,7 +134,7 @@ public class DoubleLinkedLists {
             int i=0;
             System.out.println("Index \t Kode \t Judul \t\t Distributor \t\t stok \t Rusak");
             while (tmp != null) {
-                System.out.print(i + " \t " + tmp.kode + " \t " + tmp.judul + " \t\t " + tmp.distri + " \t\t " + tmp.stok + " \t " + tmp.rusak);
+                System.out.print(i + " \t " + tmp.kode + " \t " + tmp.judul + " \t " + tmp.distri + " \t " + tmp.stok + " \t " + tmp.rusak);
                 tmp = tmp.next;
                 i++;
                 System.out.println();
@@ -198,7 +198,6 @@ public class DoubleLinkedLists {
                 current.next.prev = current.prev;
             }
             size--;
-            System.out.println("Data berhasil dihapus");
         }
     }
 
