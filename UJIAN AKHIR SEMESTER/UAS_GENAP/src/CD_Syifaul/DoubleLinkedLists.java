@@ -132,7 +132,7 @@ public class DoubleLinkedLists {
         if (!isEmpty()) {
             Node tmp = head;
             int i=0;
-            System.out.println("Index \t Kode \t Judul \t\t Distributor \t\t stok \t Rusak");
+            System.out.println("Index \t Kode \t Judul \t\t Distributor \t stok \t Rusak");
             while (tmp != null) {
                 System.out.print(i + " \t " + tmp.kode + " \t " + tmp.judul + " \t " + tmp.distri + " \t " + tmp.stok + " \t " + tmp.rusak);
                 tmp = tmp.next;
@@ -204,7 +204,7 @@ public class DoubleLinkedLists {
     public void cari(int key) {
         Node tmp = head;
         int index = 0;
-        while (tmp.next != null && tmp.kode==key) {
+        while (tmp.next != null && tmp.kode!=key) {
             tmp = tmp.next;
             index++;
         }
@@ -219,7 +219,7 @@ public class DoubleLinkedLists {
     public void cari2(String key) {
         Node tmp = head;
         int index = 0;
-        while (tmp.next != null && tmp.judul.equals(key)) {
+        while (tmp.next != null && !tmp.judul.equals(key)) {
             tmp = tmp.next;
             index++;
         }
