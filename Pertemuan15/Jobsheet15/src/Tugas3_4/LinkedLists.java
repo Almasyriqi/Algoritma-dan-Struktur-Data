@@ -1,4 +1,4 @@
-package Praktikum1;
+package Tugas3_4;
 
 /**
  * Nama     : M.Syifa'ul Ikrom A

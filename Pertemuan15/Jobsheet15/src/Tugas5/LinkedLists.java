@@ -1,4 +1,4 @@
-package Praktikum1;
+package Tugas5;
 
 /**
  * Nama     : M.Syifa'ul Ikrom A
@@ -18,34 +18,34 @@ public class LinkedLists {
         return head == null;
     }
     
-    public void addFirst(int item) {
+    public void addFirst(int item, int weight) {
         if (isEmpty()) {
-            head = new Node(null, item, null);
+            head = new Node(null, item, weight, null);
         } else {
-            Node newNode = new Node(null, item, head);
+            Node newNode = new Node(null, item, weight, head);
             head.prev = newNode;
             head = newNode;
         }
         size++;
     }
     
-    public void addLast(int item) {
+    public void addLast(int item,int weight) {
         if(isEmpty()) {
-            addFirst(item);
+            addFirst(item, weight);
         } else {
             Node current = head;
             while (current.next != null) {
                 current = current.next;
             }
-            Node newNode = new Node(current, item, null);
+            Node newNode = new Node(current, item, weight, null);
             current.next = newNode;
             size++;
         }
     }
     
-    public void add(int item, int index) throws Exception {
+    public void add(int item, int weight, int index) throws Exception {
         if (isEmpty()) {
-            addFirst(item);
+            addFirst(item, weight);
         } else if (index < 0 || index > size) {
             throw new Exception("Nilai index di luar batas");
         } else {
@@ -56,11 +56,11 @@ public class LinkedLists {
                 i++;
             }
             if (current.prev == null) {
-                Node newNode = new Node(null, item, current);
+                Node newNode = new Node(null, item, weight, current);
                 current.prev = newNode;
                 head = newNode;
             } else {
-                Node newNode = new Node(current.prev, item, current);
+                Node newNode = new Node(current.prev, item, weight, current);
                 newNode.prev = current.prev;
                 newNode.next = current;
                 current.prev.next = newNode;
@@ -173,6 +173,17 @@ public class LinkedLists {
             tmp = tmp.next;
         }
         return tmp.data;
+    }
+    
+    public int getWeight(int index) throws Exception {
+        if (isEmpty() || index >= size) {
+            throw new Exception("Nilai indeks di luar batas");
+        }
+        Node tmp = head;
+        for (int i = 0; i < index; i++) {
+            tmp = tmp.next;
+        }
+        return tmp.weight;
     }
     
     public int getByValue(int destination) throws Exception {

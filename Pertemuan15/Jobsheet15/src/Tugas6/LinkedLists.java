@@ -1,4 +1,4 @@
-package Praktikum1;
+package Tugas6;
 
 /**
  * Nama     : M.Syifa'ul Ikrom A
@@ -18,7 +18,7 @@ public class LinkedLists {
         return head == null;
     }
     
-    public void addFirst(int item) {
+    public void addFirst(String item) {
         if (isEmpty()) {
             head = new Node(null, item, null);
         } else {
@@ -29,7 +29,7 @@ public class LinkedLists {
         size++;
     }
     
-    public void addLast(int item) {
+    public void addLast(String item) {
         if(isEmpty()) {
             addFirst(item);
         } else {
@@ -43,7 +43,7 @@ public class LinkedLists {
         }
     }
     
-    public void add(int item, int index) throws Exception {
+    public void add(String item, int index) throws Exception {
         if (isEmpty()) {
             addFirst(item);
         } else if (index < 0 || index > size) {
@@ -146,14 +146,14 @@ public class LinkedLists {
         }
     }
     
-    public int getFirst() throws Exception {
+    public Object getFirst() throws Exception {
         if (isEmpty()) {
             throw new Exception("Linked List Kosong");
         }
         return head.data;
     }
     
-    public int getLast() throws Exception {
+    public Object getLast() throws Exception {
         if (isEmpty()) {
             throw new Exception("Linked List kosong");
         }
@@ -164,7 +164,7 @@ public class LinkedLists {
         return tmp.data;
     }
     
-    public int get(int index) throws Exception {
+    public Object get(int index) throws Exception {
         if (isEmpty() || index >= size) {
             throw new Exception("Nilai indeks di luar batas");
         }
@@ -175,13 +175,13 @@ public class LinkedLists {
         return tmp.data;
     }
     
-    public int getByValue(int destination) throws Exception {
+    public int getByValue(String destination) throws Exception {
         if (isEmpty()) {
             throw new Exception("Linked List kosong");
         }
         Node tmp = head;
         int index = 0;
-        while (tmp.next != null && tmp.data != destination) {
+        while (!tmp.next.equals(null) && !tmp.data.equals(destination)) {
             tmp = tmp.next;
             index++;
         }
